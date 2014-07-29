@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		822DC41F195683200001203D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822DC41E195683200001203D /* Foundation.framework */; };
+		822DC421195683200001203D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822DC420195683200001203D /* CoreGraphics.framework */; };
+		822DC423195683200001203D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822DC422195683200001203D /* UIKit.framework */; };
+		822DC429195683200001203D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 822DC427195683200001203D /* InfoPlist.strings */; };
+		822DC42B195683200001203D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 822DC42A195683200001203D /* main.m */; };
+		822DC42F195683200001203D /* JMCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 822DC42E195683200001203D /* JMCAppDelegate.m */; };
+		822DC432195683200001203D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822DC430195683200001203D /* Main.storyboard */; };
+		822DC435195683200001203D /* JMCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822DC434195683200001203D /* JMCViewController.m */; };
+		822DC437195683200001203D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 822DC436195683200001203D /* Images.xcassets */; };
+		822DC43E195683210001203D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822DC43D195683210001203D /* XCTest.framework */; };
+		822DC43F195683210001203D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822DC41E195683200001203D /* Foundation.framework */; };
+		822DC440195683210001203D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822DC422195683200001203D /* UIKit.framework */; };
+		822DC448195683210001203D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 822DC446195683210001203D /* InfoPlist.strings */; };
+		822DC44A195683210001203D /* BracketsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 822DC449195683210001203D /* BracketsTests.m */; };
+		82EA15D719879A7200FEBF99 /* DoubleElimination.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EA15C319879A7200FEBF99 /* DoubleElimination.m */; };
+		82EA15D819879A7200FEBF99 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EA15C519879A7200FEBF99 /* Game.m */; };
+		82EA15D919879A7200FEBF99 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EA15C719879A7200FEBF99 /* Player.m */; };
+		82EA15DA19879A7200FEBF99 /* RoundRobin.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EA15C919879A7200FEBF99 /* RoundRobin.m */; };
+		82EA15DB19879A7200FEBF99 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EA15CB19879A7200FEBF99 /* Score.m */; };
+		82EA15DC19879A7200FEBF99 /* SingleElimination.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EA15CD19879A7200FEBF99 /* SingleElimination.m */; };
+		82EA15DD19879A7200FEBF99 /* Stats.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EA15CF19879A7200FEBF99 /* Stats.m */; };
+		82EA15DE19879A7200FEBF99 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EA15D119879A7200FEBF99 /* Team.m */; };
+		82EA15DF19879A7200FEBF99 /* Tournament.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EA15D319879A7200FEBF99 /* Tournament.m */; };
+		82EA15E019879A7200FEBF99 /* TournamentUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EA15D619879A7200FEBF99 /* TournamentUtilities.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		822DC441195683210001203D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 822DC413195683200001203D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 822DC41A195683200001203D;
+			remoteInfo = Brackets;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		822DC41B195683200001203D /* Brackets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brackets.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		822DC41E195683200001203D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		822DC420195683200001203D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		822DC422195683200001203D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		822DC426195683200001203D /* Brackets-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Brackets-Info.plist"; sourceTree = "<group>"; };
+		822DC428195683200001203D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		822DC42A195683200001203D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		822DC42C195683200001203D /* Brackets-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brackets-Prefix.pch"; sourceTree = "<group>"; };
+		822DC42D195683200001203D /* JMCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMCAppDelegate.h; sourceTree = "<group>"; };
+		822DC42E195683200001203D /* JMCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMCAppDelegate.m; sourceTree = "<group>"; };
+		822DC431195683200001203D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		822DC433195683200001203D /* JMCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMCViewController.h; sourceTree = "<group>"; };
+		822DC434195683200001203D /* JMCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMCViewController.m; sourceTree = "<group>"; };
+		822DC436195683200001203D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		822DC43C195683210001203D /* BracketsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BracketsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		822DC43D195683210001203D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		822DC445195683210001203D /* BracketsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BracketsTests-Info.plist"; sourceTree = "<group>"; };
+		822DC447195683210001203D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		822DC449195683210001203D /* BracketsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BracketsTests.m; sourceTree = "<group>"; };
+		82EA15C219879A7200FEBF99 /* DoubleElimination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubleElimination.h; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/DoubleElimination.h; sourceTree = "<group>"; };
+		82EA15C319879A7200FEBF99 /* DoubleElimination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubleElimination.m; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/DoubleElimination.m; sourceTree = "<group>"; };
+		82EA15C419879A7200FEBF99 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/Game.h; sourceTree = "<group>"; };
+		82EA15C519879A7200FEBF99 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Game.m; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/Game.m; sourceTree = "<group>"; };
+		82EA15C619879A7200FEBF99 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/Player.h; sourceTree = "<group>"; };
+		82EA15C719879A7200FEBF99 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/Player.m; sourceTree = "<group>"; };
+		82EA15C819879A7200FEBF99 /* RoundRobin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundRobin.h; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/RoundRobin.h; sourceTree = "<group>"; };
+		82EA15C919879A7200FEBF99 /* RoundRobin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoundRobin.m; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/RoundRobin.m; sourceTree = "<group>"; };
+		82EA15CA19879A7200FEBF99 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Score.h; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/Score.h; sourceTree = "<group>"; };
+		82EA15CB19879A7200FEBF99 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Score.m; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/Score.m; sourceTree = "<group>"; };
+		82EA15CC19879A7200FEBF99 /* SingleElimination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleElimination.h; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/SingleElimination.h; sourceTree = "<group>"; };
+		82EA15CD19879A7200FEBF99 /* SingleElimination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingleElimination.m; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/SingleElimination.m; sourceTree = "<group>"; };
+		82EA15CE19879A7200FEBF99 /* Stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stats.h; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/Stats.h; sourceTree = "<group>"; };
+		82EA15CF19879A7200FEBF99 /* Stats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stats.m; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/Stats.m; sourceTree = "<group>"; };
+		82EA15D019879A7200FEBF99 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Team.h; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/Team.h; sourceTree = "<group>"; };
+		82EA15D119879A7200FEBF99 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Team.m; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/Team.m; sourceTree = "<group>"; };
+		82EA15D219879A7200FEBF99 /* Tournament.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tournament.h; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/Tournament.h; sourceTree = "<group>"; };
+		82EA15D319879A7200FEBF99 /* Tournament.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tournament.m; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/Tournament.m; sourceTree = "<group>"; };
+		82EA15D419879A7200FEBF99 /* TournamentProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TournamentProtocol.h; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/TournamentProtocol.h; sourceTree = "<group>"; };
+		82EA15D519879A7200FEBF99 /* TournamentUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TournamentUtilities.h; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/TournamentUtilities.h; sourceTree = "<group>"; };
+		82EA15D619879A7200FEBF99 /* TournamentUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TournamentUtilities.m; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/TournamentUtilities.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		822DC418195683200001203D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				822DC421195683200001203D /* CoreGraphics.framework in Frameworks */,
+				822DC423195683200001203D /* UIKit.framework in Frameworks */,
+				822DC41F195683200001203D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		822DC439195683210001203D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				822DC43E195683210001203D /* XCTest.framework in Frameworks */,
+				822DC440195683210001203D /* UIKit.framework in Frameworks */,
+				822DC43F195683210001203D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		822DC412195683200001203D = {
+			isa = PBXGroup;
+			children = (
+				82EA15C119879A2900FEBF99 /* TournamentLogic */,
+				822DC424195683200001203D /* Brackets */,
+				822DC443195683210001203D /* BracketsTests */,
+				822DC41D195683200001203D /* Frameworks */,
+				822DC41C195683200001203D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		822DC41C195683200001203D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				822DC41B195683200001203D /* Brackets.app */,
+				822DC43C195683210001203D /* BracketsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		822DC41D195683200001203D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				822DC41E195683200001203D /* Foundation.framework */,
+				822DC420195683200001203D /* CoreGraphics.framework */,
+				822DC422195683200001203D /* UIKit.framework */,
+				822DC43D195683210001203D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		822DC424195683200001203D /* Brackets */ = {
+			isa = PBXGroup;
+			children = (
+				822DC42D195683200001203D /* JMCAppDelegate.h */,
+				822DC42E195683200001203D /* JMCAppDelegate.m */,
+				822DC430195683200001203D /* Main.storyboard */,
+				822DC433195683200001203D /* JMCViewController.h */,
+				822DC434195683200001203D /* JMCViewController.m */,
+				822DC436195683200001203D /* Images.xcassets */,
+				822DC425195683200001203D /* Supporting Files */,
+			);
+			path = Brackets;
+			sourceTree = "<group>";
+		};
+		822DC425195683200001203D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				822DC426195683200001203D /* Brackets-Info.plist */,
+				822DC427195683200001203D /* InfoPlist.strings */,
+				822DC42A195683200001203D /* main.m */,
+				822DC42C195683200001203D /* Brackets-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		822DC443195683210001203D /* BracketsTests */ = {
+			isa = PBXGroup;
+			children = (
+				822DC449195683210001203D /* BracketsTests.m */,
+				822DC444195683210001203D /* Supporting Files */,
+			);
+			path = BracketsTests;
+			sourceTree = "<group>";
+		};
+		822DC444195683210001203D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				822DC445195683210001203D /* BracketsTests-Info.plist */,
+				822DC446195683210001203D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		82EA15C119879A2900FEBF99 /* TournamentLogic */ = {
+			isa = PBXGroup;
+			children = (
+				82EA15C219879A7200FEBF99 /* DoubleElimination.h */,
+				82EA15C319879A7200FEBF99 /* DoubleElimination.m */,
+				82EA15C419879A7200FEBF99 /* Game.h */,
+				82EA15C519879A7200FEBF99 /* Game.m */,
+				82EA15C619879A7200FEBF99 /* Player.h */,
+				82EA15C719879A7200FEBF99 /* Player.m */,
+				82EA15C819879A7200FEBF99 /* RoundRobin.h */,
+				82EA15C919879A7200FEBF99 /* RoundRobin.m */,
+				82EA15CA19879A7200FEBF99 /* Score.h */,
+				82EA15CB19879A7200FEBF99 /* Score.m */,
+				82EA15CC19879A7200FEBF99 /* SingleElimination.h */,
+				82EA15CD19879A7200FEBF99 /* SingleElimination.m */,
+				82EA15CE19879A7200FEBF99 /* Stats.h */,
+				82EA15CF19879A7200FEBF99 /* Stats.m */,
+				82EA15D019879A7200FEBF99 /* Team.h */,
+				82EA15D119879A7200FEBF99 /* Team.m */,
+				82EA15D219879A7200FEBF99 /* Tournament.h */,
+				82EA15D319879A7200FEBF99 /* Tournament.m */,
+				82EA15D419879A7200FEBF99 /* TournamentProtocol.h */,
+				82EA15D519879A7200FEBF99 /* TournamentUtilities.h */,
+				82EA15D619879A7200FEBF99 /* TournamentUtilities.m */,
+			);
+			name = TournamentLogic;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		822DC41A195683200001203D /* Brackets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 822DC44D195683210001203D /* Build configuration list for PBXNativeTarget "Brackets" */;
+			buildPhases = (
+				822DC417195683200001203D /* Sources */,
+				822DC418195683200001203D /* Frameworks */,
+				822DC419195683200001203D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Brackets;
+			productName = Brackets;
+			productReference = 822DC41B195683200001203D /* Brackets.app */;
+			productType = "com.apple.product-type.application";
+		};
+		822DC43B195683210001203D /* BracketsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 822DC450195683210001203D /* Build configuration list for PBXNativeTarget "BracketsTests" */;
+			buildPhases = (
+				822DC438195683210001203D /* Sources */,
+				822DC439195683210001203D /* Frameworks */,
+				822DC43A195683210001203D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				822DC442195683210001203D /* PBXTargetDependency */,
+			);
+			name = BracketsTests;
+			productName = BracketsTests;
+			productReference = 822DC43C195683210001203D /* BracketsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		822DC413195683200001203D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JMC;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Janusz Chudzynski";
+				TargetAttributes = {
+					822DC43B195683210001203D = {
+						TestTargetID = 822DC41A195683200001203D;
+					};
+				};
+			};
+			buildConfigurationList = 822DC416195683200001203D /* Build configuration list for PBXProject "Brackets" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 822DC412195683200001203D;
+			productRefGroup = 822DC41C195683200001203D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				822DC41A195683200001203D /* Brackets */,
+				822DC43B195683210001203D /* BracketsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		822DC419195683200001203D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				822DC437195683200001203D /* Images.xcassets in Resources */,
+				822DC429195683200001203D /* InfoPlist.strings in Resources */,
+				822DC432195683200001203D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		822DC43A195683210001203D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				822DC448195683210001203D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		822DC417195683200001203D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82EA15DE19879A7200FEBF99 /* Team.m in Sources */,
+				82EA15D819879A7200FEBF99 /* Game.m in Sources */,
+				82EA15DC19879A7200FEBF99 /* SingleElimination.m in Sources */,
+				822DC42B195683200001203D /* main.m in Sources */,
+				82EA15DF19879A7200FEBF99 /* Tournament.m in Sources */,
+				822DC42F195683200001203D /* JMCAppDelegate.m in Sources */,
+				82EA15D719879A7200FEBF99 /* DoubleElimination.m in Sources */,
+				82EA15DD19879A7200FEBF99 /* Stats.m in Sources */,
+				82EA15D919879A7200FEBF99 /* Player.m in Sources */,
+				822DC435195683200001203D /* JMCViewController.m in Sources */,
+				82EA15DB19879A7200FEBF99 /* Score.m in Sources */,
+				82EA15E019879A7200FEBF99 /* TournamentUtilities.m in Sources */,
+				82EA15DA19879A7200FEBF99 /* RoundRobin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		822DC438195683210001203D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				822DC44A195683210001203D /* BracketsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		822DC442195683210001203D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 822DC41A195683200001203D /* Brackets */;
+			targetProxy = 822DC441195683210001203D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		822DC427195683200001203D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				822DC428195683200001203D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		822DC430195683200001203D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				822DC431195683200001203D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		822DC446195683210001203D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				822DC447195683210001203D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		822DC44B195683210001203D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		822DC44C195683210001203D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		822DC44E195683210001203D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Brackets/Brackets-Prefix.pch";
+				INFOPLIST_FILE = "Brackets/Brackets-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		822DC44F195683210001203D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Brackets/Brackets-Prefix.pch";
+				INFOPLIST_FILE = "Brackets/Brackets-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		822DC451195683210001203D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Brackets.app/Brackets";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Brackets/Brackets-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BracketsTests/BracketsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		822DC452195683210001203D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Brackets.app/Brackets";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Brackets/Brackets-Prefix.pch";
+				INFOPLIST_FILE = "BracketsTests/BracketsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		822DC416195683200001203D /* Build configuration list for PBXProject "Brackets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				822DC44B195683210001203D /* Debug */,
+				822DC44C195683210001203D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		822DC44D195683210001203D /* Build configuration list for PBXNativeTarget "Brackets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				822DC44E195683210001203D /* Debug */,
+				822DC44F195683210001203D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		822DC450195683210001203D /* Build configuration list for PBXNativeTarget "BracketsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				822DC451195683210001203D /* Debug */,
+				822DC452195683210001203D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 822DC413195683200001203D /* Project object */;
+}

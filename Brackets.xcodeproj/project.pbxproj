@@ -32,6 +32,8 @@
 		82EA15DF19879A7200FEBF99 /* Tournament.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EA15D319879A7200FEBF99 /* Tournament.m */; };
 		82EA15E019879A7200FEBF99 /* TournamentUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EA15D619879A7200FEBF99 /* TournamentUtilities.m */; };
 		82EA7D01198B3DD50044D7AE /* JMCScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EA7D00198B3DD50044D7AE /* JMCScheduleViewController.m */; };
+		82EA7D03198DBA310044D7AE /* GameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82EA7D02198DBA310044D7AE /* GameView.xib */; };
+		82EA7D4C198FB0B20044D7AE /* JMCGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EA7D4B198FB0B20044D7AE /* JMCGameView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,9 @@
 		82EA15D619879A7200FEBF99 /* TournamentUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TournamentUtilities.m; path = ../BracketsCommandLine/BracketsCommandLineOS/BracketsCommandLineOS/TournamentUtilities.m; sourceTree = "<group>"; };
 		82EA7CFF198B3DD50044D7AE /* JMCScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMCScheduleViewController.h; path = ViewControllers/JMCScheduleViewController.h; sourceTree = "<group>"; };
 		82EA7D00198B3DD50044D7AE /* JMCScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMCScheduleViewController.m; path = ViewControllers/JMCScheduleViewController.m; sourceTree = "<group>"; };
+		82EA7D02198DBA310044D7AE /* GameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GameView.xib; path = Views/GameView.xib; sourceTree = "<group>"; };
+		82EA7D4A198FB0B20044D7AE /* JMCGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCGameView.h; sourceTree = "<group>"; };
+		82EA7D4B198FB0B20044D7AE /* JMCGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCGameView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,10 +155,13 @@
 				822DC42D195683200001203D /* JMCAppDelegate.h */,
 				822DC42E195683200001203D /* JMCAppDelegate.m */,
 				822DC430195683200001203D /* Main.storyboard */,
+				82EA7D02198DBA310044D7AE /* GameView.xib */,
 				82EA7CFF198B3DD50044D7AE /* JMCScheduleViewController.h */,
 				82EA7D00198B3DD50044D7AE /* JMCScheduleViewController.m */,
 				822DC433195683200001203D /* JMCViewController.h */,
 				822DC434195683200001203D /* JMCViewController.m */,
+				82EA7D4A198FB0B20044D7AE /* JMCGameView.h */,
+				82EA7D4B198FB0B20044D7AE /* JMCGameView.m */,
 				822DC436195683200001203D /* Images.xcassets */,
 				822DC425195683200001203D /* Supporting Files */,
 			);
@@ -296,6 +304,7 @@
 			files = (
 				822DC437195683200001203D /* Images.xcassets in Resources */,
 				822DC429195683200001203D /* InfoPlist.strings in Resources */,
+				82EA7D03198DBA310044D7AE /* GameView.xib in Resources */,
 				822DC432195683200001203D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +327,7 @@
 				82EA15DE19879A7200FEBF99 /* Team.m in Sources */,
 				82EA15D819879A7200FEBF99 /* Game.m in Sources */,
 				82EA15DC19879A7200FEBF99 /* SingleElimination.m in Sources */,
+				82EA7D4C198FB0B20044D7AE /* JMCGameView.m in Sources */,
 				822DC42B195683200001203D /* main.m in Sources */,
 				82EA15DF19879A7200FEBF99 /* Tournament.m in Sources */,
 				822DC42F195683200001203D /* JMCAppDelegate.m in Sources */,

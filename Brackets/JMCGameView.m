@@ -24,110 +24,174 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-    [self addView];
+    [self drawCanvas1WithTeam1Name:@"Erick/Taylor" team2Name:@"Charlie/Chealsea" gameNumber:@"11" height:60 horizontal_topy:25 team2LabelHeight:16 team2BackgroundHeight:28 team2ButtonHeight:20 team_font_size:9 left_boundary:0];
+    
+    [self drawCanvas1WithTeam1Name:@"Janek/Taylor" team2Name:@"Keith/Chealsea" gameNumber:@"12" height:60 horizontal_topy:130 team2LabelHeight:16 team2BackgroundHeight:28 team2ButtonHeight:20 team_font_size:9 left_boundary:0];
+    
+    [self drawCanvas1WithTeam1Name:@"Janek/Taylor" team2Name:@"Keith/Chealsea" gameNumber:@"13" height:105 horizontal_topy:55 team2LabelHeight:16 team2BackgroundHeight:28 team2ButtonHeight:20 team_font_size:9 left_boundary:162];
+    
     // Drawing code
 }
--(void)addView{
+
+- (void)drawCanvas1WithTeam1Name: (NSString*)team1Name team2Name: (NSString*)team2Name gameNumber: (NSString*)gameNumber height: (CGFloat)height horizontal_topy: (CGFloat)horizontal_topy team2LabelHeight: (CGFloat)team2LabelHeight team2BackgroundHeight: (CGFloat)team2BackgroundHeight team2ButtonHeight: (CGFloat)team2ButtonHeight team_font_size: (CGFloat)team_font_size left_boundary: (CGFloat)left_boundary;
+{
+    //// General Declarations
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
     //// Color Declarations
-    UIColor* color2 = [UIColor colorWithRed: 0.833 green: 0.833 blue: 0.833 alpha: 1];
+    UIColor* color = [UIColor colorWithRed: 0.825 green: 0.922 blue: 1 alpha: 1];
+    UIColor* color2 = [UIColor colorWithRed: 0.038 green: 0.286 blue: 0.357 alpha: 1];
     
-    //// Abstracted Attributes
-    NSString* text3Content = @"1";
-    NSString* textContent = @"Team 1";
-    NSString* text2Content = @"Team 1";
+    //// Variable Declarations
+    CGFloat horizontal_expression = horizontal_topy + height;
+    CGFloat gameNumberExpression = horizontal_topy + height / 2.0 - 12;
+    CGFloat horizontalCenterExpression = horizontal_topy + height / 2.0 ;
+    CGFloat team1BackgroundExpression = horizontal_topy + 1 - 28.0 / 2.0;
+    CGFloat team1TextExpression = horizontal_topy + 1 - 20.0 / 2.0;
+    CGFloat team2LabelExpression = horizontal_topy + height - team2LabelHeight / 2.0;
+    CGFloat team2BackgroundExpression = horizontal_topy + height - team2BackgroundHeight / 2.0;
+    CGFloat team2ButtonExpression = horizontal_topy + height - team2ButtonHeight / 2.0;
+    CGFloat team1ButtonExpression = horizontal_topy - team2ButtonHeight / 2.0 + 1;
+    CGFloat left_team_background_expression = left_boundary + 19.5;
+    CGFloat left_label_expression = left_boundary + 22.5;
+    CGFloat left_button = left_boundary + 97;
+    CGFloat left_game_number_expression = left_boundary + 122;
+    CGFloat left_vertical_line_expression = left_boundary + 133;
     
-    
-    //// Group
-    {
-        //// Rectangle 2 Drawing
-        UIBezierPath* rectangle2Path = [UIBezierPath bezierPathWithRect: CGRectMake(26.5, 27.5, 86, 0)];
-        [[UIColor whiteColor] setFill];
-        [rectangle2Path fill];
-        [[UIColor blackColor] setStroke];
-        rectangle2Path.lineWidth = 1;
-        [rectangle2Path stroke];
-        
-        
-        //// Rounded Rectangle Drawing
-        UIBezierPath* roundedRectanglePath = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(42.5, 21.5, 54, 12) cornerRadius: 4];
-        [color2 setFill];
-        [roundedRectanglePath fill];
-        [[UIColor blackColor] setStroke];
-        roundedRectanglePath.lineWidth = 1;
-        [roundedRectanglePath stroke];
-        
-        
-        //// Text Drawing
-        CGRect textRect = CGRectMake(41, 24, 55, 10);
-        NSMutableParagraphStyle* textStyle = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
-        [textStyle setAlignment: NSTextAlignmentCenter];
-        
-        NSDictionary* textFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"Helvetica" size: 7], NSForegroundColorAttributeName: [UIColor blackColor], NSParagraphStyleAttributeName: textStyle};
-        
-        [textContent drawInRect: textRect withAttributes: textFontAttributes];
-    }
-    
-    
-    //// Group 2
-    {
-        //// Rectangle Drawing
-        UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(26.5, 77.5, 86, 0)];
-        [[UIColor whiteColor] setFill];
-        [rectanglePath fill];
-        [[UIColor blackColor] setStroke];
-        rectanglePath.lineWidth = 1;
-        [rectanglePath stroke];
-        
-        
-        //// Rounded Rectangle 2 Drawing
-        UIBezierPath* roundedRectangle2Path = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(42.5, 71.5, 54, 12) cornerRadius: 4];
-        [color2 setFill];
-        [roundedRectangle2Path fill];
-        [[UIColor blackColor] setStroke];
-        roundedRectangle2Path.lineWidth = 1;
-        [roundedRectangle2Path stroke];
-        
-        
-        //// Text 2 Drawing
-        CGRect text2Rect = CGRectMake(41, 73, 55, 11);
-        NSMutableParagraphStyle* text2Style = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
-        [text2Style setAlignment: NSTextAlignmentCenter];
-        
-        NSDictionary* text2FontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"Helvetica" size: 7], NSForegroundColorAttributeName: [UIColor blackColor], NSParagraphStyleAttributeName: text2Style};
-        
-        [text2Content drawInRect: text2Rect withAttributes: text2FontAttributes];
-    }
-    
-    
-    //// Rectangle 3 Drawing
-    UIBezierPath* rectangle3Path = [UIBezierPath bezierPathWithRect: CGRectMake(112.5, 27.5, 0, 50)];
-    [[UIColor whiteColor] setFill];
-    [rectangle3Path fill];
-    [[UIColor blackColor] setStroke];
-    rectangle3Path.lineWidth = 1;
-    [rectangle3Path stroke];
-    
-    
-    //// Oval Drawing
-    UIBezierPath* ovalPath = [UIBezierPath bezierPathWithOvalInRect: CGRectMake(103.5, 43.5, 18, 18)];
+    //// vertical_center Drawing
+    UIBezierPath* vertical_centerPath = [UIBezierPath bezierPathWithRect: CGRectMake(left_vertical_line_expression, horizontalCenterExpression, 30, 2)];
     [color2 setFill];
-    [ovalPath fill];
-    [[UIColor blackColor] setStroke];
-    ovalPath.lineWidth = 1;
-    [ovalPath stroke];
+    [vertical_centerPath fill];
     
     
-    //// Text 3 Drawing
-    CGRect text3Rect = CGRectMake(103, 46, 18, 11);
-    NSMutableParagraphStyle* text3Style = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
-    [text3Style setAlignment: NSTextAlignmentCenter];
-    
-    NSDictionary* text3FontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"Helvetica" size: 9], NSForegroundColorAttributeName: [UIColor blackColor], NSParagraphStyleAttributeName: text3Style};
-    
-    [text3Content drawInRect: text3Rect withAttributes: text3FontAttributes];
+    //// horizontal_top Drawing
+    UIBezierPath* horizontal_topPath = [UIBezierPath bezierPathWithRect: CGRectMake(left_boundary, horizontal_topy, 135, 2)];
+    [color2 setFill];
+    [horizontal_topPath fill];
     
     
-    //    self.view addSubview:
+    //// horizontal_bottom Drawing
+    UIBezierPath* horizontal_bottomPath = [UIBezierPath bezierPathWithRect: CGRectMake(left_boundary, horizontal_expression, 135, 2)];
+    [color2 setFill];
+    [horizontal_bottomPath fill];
+    
+    
+    //// vertical Drawing
+    UIBezierPath* verticalPath = [UIBezierPath bezierPathWithRect: CGRectMake(left_vertical_line_expression, horizontal_topy, 2, height)];
+    [color2 setFill];
+    [verticalPath fill];
+    
+    
+    //// gameNumberBackground Drawing
+    UIBezierPath* gameNumberBackgroundPath = [UIBezierPath bezierPathWithOvalInRect: CGRectMake(left_game_number_expression, gameNumberExpression, 24, 24)];
+    [color setFill];
+    [gameNumberBackgroundPath fill];
+    [color2 setStroke];
+    gameNumberBackgroundPath.lineWidth = 1;
+    [gameNumberBackgroundPath stroke];
+    
+    
+    //// team1Background Drawing
+    UIBezierPath* team1BackgroundPath = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(left_team_background_expression, team1BackgroundExpression, 100, 28) cornerRadius: 2];
+    [color setFill];
+    [team1BackgroundPath fill];
+    [color2 setStroke];
+    team1BackgroundPath.lineWidth = 1;
+    [team1BackgroundPath stroke];
+    
+    
+    //// team1Label Drawing
+    CGRect team1LabelRect = CGRectMake(left_label_expression, team1TextExpression, 73.5, 20.5);
+    NSMutableParagraphStyle* team1LabelStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
+    team1LabelStyle.alignment = NSTextAlignmentLeft;
+    
+    NSDictionary* team1LabelFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"Helvetica" size: team_font_size], NSForegroundColorAttributeName: color2, NSParagraphStyleAttributeName: team1LabelStyle};
+    
+    [team1Name drawInRect: CGRectOffset(team1LabelRect, 0, (CGRectGetHeight(team1LabelRect) - [team1Name boundingRectWithSize: team1LabelRect.size options: NSStringDrawingUsesLineFragmentOrigin attributes: team1LabelFontAttributes context: nil].size.height) / 2) withAttributes: team1LabelFontAttributes];
+    
+    
+    //// gameNumberText Drawing
+    CGRect gameNumberTextRect = CGRectMake(left_game_number_expression, gameNumberExpression, 24, 24);
+    NSMutableParagraphStyle* gameNumberTextStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
+    gameNumberTextStyle.alignment = NSTextAlignmentCenter;
+    
+    NSDictionary* gameNumberTextFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"Helvetica" size: 9], NSForegroundColorAttributeName: color2, NSParagraphStyleAttributeName: gameNumberTextStyle};
+    
+    [gameNumber drawInRect: CGRectOffset(gameNumberTextRect, 0, (CGRectGetHeight(gameNumberTextRect) - [gameNumber boundingRectWithSize: gameNumberTextRect.size options: NSStringDrawingUsesLineFragmentOrigin attributes: gameNumberTextFontAttributes context: nil].size.height) / 2) withAttributes: gameNumberTextFontAttributes];
+    
+    
+    //// team1Button Drawing
+    CGContextSaveGState(context);
+    CGContextTranslateCTM(context, left_button, team1ButtonExpression);
+    
+    UIBezierPath* team1ButtonPath = UIBezierPath.bezierPath;
+    [team1ButtonPath moveToPoint: CGPointMake(10, 20)];
+    [team1ButtonPath addCurveToPoint: CGPointMake(20, 10) controlPoint1: CGPointMake(15.52, 20) controlPoint2: CGPointMake(20, 15.52)];
+    [team1ButtonPath addCurveToPoint: CGPointMake(10, 0) controlPoint1: CGPointMake(20, 4.48) controlPoint2: CGPointMake(15.52, 0)];
+    [team1ButtonPath addCurveToPoint: CGPointMake(0, 10) controlPoint1: CGPointMake(4.48, 0) controlPoint2: CGPointMake(0, 4.48)];
+    [team1ButtonPath addCurveToPoint: CGPointMake(10, 20) controlPoint1: CGPointMake(0, 15.52) controlPoint2: CGPointMake(4.48, 20)];
+    [team1ButtonPath closePath];
+    [team1ButtonPath moveToPoint: CGPointMake(6.9, 4.74)];
+    [team1ButtonPath addLineToPoint: CGPointMake(7.37, 4.27)];
+    [team1ButtonPath addLineToPoint: CGPointMake(13.1, 10)];
+    [team1ButtonPath addLineToPoint: CGPointMake(7.37, 15.73)];
+    [team1ButtonPath addLineToPoint: CGPointMake(6.9, 15.26)];
+    [team1ButtonPath addLineToPoint: CGPointMake(12.16, 10)];
+    [team1ButtonPath addLineToPoint: CGPointMake(6.9, 4.74)];
+    [team1ButtonPath closePath];
+    [color2 setFill];
+    [team1ButtonPath fill];
+    
+    CGContextRestoreGState(context);
+    
+    
+    //// team2Background Drawing
+    UIBezierPath* team2BackgroundPath = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(left_team_background_expression, team2BackgroundExpression, 100, 28) cornerRadius: 2];
+    [color setFill];
+    [team2BackgroundPath fill];
+    [color2 setStroke];
+    team2BackgroundPath.lineWidth = 1;
+    [team2BackgroundPath stroke];
+    
+    
+    //// team2Label Drawing
+    CGRect team2LabelRect = CGRectMake(left_label_expression, team2LabelExpression, 73.5, 16);
+    NSMutableParagraphStyle* team2LabelStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
+    team2LabelStyle.alignment = NSTextAlignmentLeft;
+    
+    NSDictionary* team2LabelFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"Helvetica" size: team_font_size], NSForegroundColorAttributeName: color2, NSParagraphStyleAttributeName: team2LabelStyle};
+    
+    [team2Name drawInRect: CGRectOffset(team2LabelRect, 0, (CGRectGetHeight(team2LabelRect) - [team2Name boundingRectWithSize: team2LabelRect.size options: NSStringDrawingUsesLineFragmentOrigin attributes: team2LabelFontAttributes context: nil].size.height) / 2) withAttributes: team2LabelFontAttributes];
+    
+    
+    //// team2Button Drawing
+    CGContextSaveGState(context);
+    CGContextTranslateCTM(context, left_button, team2ButtonExpression);
+    
+    UIBezierPath* team2ButtonPath = UIBezierPath.bezierPath;
+    [team2ButtonPath moveToPoint: CGPointMake(10, 20)];
+    [team2ButtonPath addCurveToPoint: CGPointMake(20, 10) controlPoint1: CGPointMake(15.52, 20) controlPoint2: CGPointMake(20, 15.52)];
+    [team2ButtonPath addCurveToPoint: CGPointMake(10, 0) controlPoint1: CGPointMake(20, 4.48) controlPoint2: CGPointMake(15.52, 0)];
+    [team2ButtonPath addCurveToPoint: CGPointMake(0, 10) controlPoint1: CGPointMake(4.48, 0) controlPoint2: CGPointMake(0, 4.48)];
+    [team2ButtonPath addCurveToPoint: CGPointMake(10, 20) controlPoint1: CGPointMake(0, 15.52) controlPoint2: CGPointMake(4.48, 20)];
+    [team2ButtonPath closePath];
+    [team2ButtonPath moveToPoint: CGPointMake(6.9, 4.74)];
+    [team2ButtonPath addLineToPoint: CGPointMake(7.37, 4.27)];
+    [team2ButtonPath addLineToPoint: CGPointMake(13.1, 10)];
+    [team2ButtonPath addLineToPoint: CGPointMake(7.37, 15.73)];
+    [team2ButtonPath addLineToPoint: CGPointMake(6.9, 15.26)];
+    [team2ButtonPath addLineToPoint: CGPointMake(12.16, 10)];
+    [team2ButtonPath addLineToPoint: CGPointMake(6.9, 4.74)];
+    [team2ButtonPath closePath];
+    [color2 setFill];
+    [team2ButtonPath fill];
+    
+    CGContextRestoreGState(context);
 }
+
+
+
+
+
 
 @end
